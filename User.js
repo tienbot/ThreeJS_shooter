@@ -30,7 +30,7 @@ class User{
 
         game.scene.add(this.root);
 
-        this.loadingBar = game.loadingBar;
+        // this.loadingBar = game.loadingBar;
 
         this.load();
 
@@ -198,7 +198,7 @@ class User{
     		},
 			// called while loading is progressing
 			xhr => {
-				this.loadingBar.update( 'user', xhr.loaded, xhr.total );
+				// this.loadingBar.update( 'user', xhr.loaded, xhr.total );
 			},
 			// called when loading has errors
 			err => {

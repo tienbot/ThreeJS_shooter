@@ -6,7 +6,7 @@ import {Skeleton, Raycaster, BufferGeometry, Line, Vector3} from './libs/three12
 class NPCHandler{
     constructor( game ){
         this.game = game;
-		this.loadingBar = this.game.loadingBar;
+		// this.loadingBar = this.game.loadingBar;
 		this.ready = false;
 		this.load();
 	}
@@ -48,7 +48,7 @@ class NPCHandler{
 		const dracoLoader = new DRACOLoader();
         dracoLoader.setDecoderPath( './libs/three128/draco/' );
         loader.setDRACOLoader( dracoLoader );
-        this.loadingBar.visible = true;
+        // this.loadingBar.visible = true;
 		
 		// Load a GLTF resource
 		loader.load(
@@ -65,7 +65,7 @@ class NPCHandler{
 			// called while loading is progressing
 			xhr => {
 
-				this.loadingBar.update( 'swat-guy', xhr.loaded, xhr.total );
+				// this.loadingBar.update( 'swat-guy', xhr.loaded, xhr.total );
 
 			},
 			// called when loading has errors
@@ -133,7 +133,7 @@ class NPCHandler{
 			
 		});
 
-		this.loadingBar.visible = !this.loadingBar.loaded;
+		// this.loadingBar.visible = !this.loadingBar.loaded;
 		this.ready = true;
 
 		this.game.startRendering();
