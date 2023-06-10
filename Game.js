@@ -211,7 +211,7 @@ class Game{
         const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
         pmremGenerator.compileEquirectangularShader();
         
-        loader.load( './assets/hdr/factory.hdr',
+        loader.load( 'hdr/factory.hdr',
 		texture => {
           const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
           pmremGenerator.dispose();
