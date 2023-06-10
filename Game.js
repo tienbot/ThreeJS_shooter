@@ -238,7 +238,7 @@ class Game{
     loadEnvironment(){
     	const loader = new GLTFLoader( ).setPath(`${this.assetsPath}factory/`);
         
-        this.loadingBar.visible = true;
+        this.loadingBar.visible = false;
 		
 		// Load a glTF resource
 		loader.load(
