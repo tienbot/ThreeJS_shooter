@@ -10,7 +10,7 @@ import { BulletHandler } from './BulletHandler.js';
 import { UI } from './UI.js';
 import { EffectComposer } from './libs/three128/pp/EffectComposer.js';
 import { RenderPass } from './libs/three128/pp/RenderPass.js';
-import { ShaderPass } from '.libs/three128/pp/ShaderPass.js';
+import { ShaderPass } from './libs/three128/pp/ShaderPass.js';
 import { GammaCorrectionShader } from './libs/three128/pp/GammaCorrectionShader.js';
 import { Tween } from './libs/Toon3D.js';
 import { SFX } from './libs/SFX.js';
