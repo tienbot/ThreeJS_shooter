@@ -5,8 +5,8 @@ import {
         Raycaster, 
         Vector3, 
         Quaternion
-    } from '../../libs/three128/three.module.js';
-import { sphereIntersectsCylinder } from '../../libs/Collisions.js';
+    } from './libs/three128/three.module.js';
+import { sphereIntersectsCylinder } from './libs/Collisions.js';
 
 class BulletHandler{
     constructor(game){

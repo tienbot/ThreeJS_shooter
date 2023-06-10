@@ -1,19 +1,19 @@
-import * as THREE from '../../libs/three128/three.module.js';
-import { GLTFLoader } from '../../libs/three128/GLTFLoader.js';
-import { RGBELoader } from '../../libs/three128/RGBELoader.js';
+import * as THREE from './libs/three128/three.module.js';
+import { GLTFLoader } from './libs/three128/GLTFLoader.js';
+import { RGBELoader } from './libs/three128/RGBELoader.js';
 import { NPCHandler } from './NPCHandler.js';
-import { LoadingBar } from '../../libs/LoadingBar.js';
-import { Pathfinding } from '../../libs/pathfinding/Pathfinding.js';
+import { LoadingBar } from './libs/LoadingBar.js';
+import { Pathfinding } from './libs/pathfinding/Pathfinding.js';
 import { User } from './User.js';
 import { Controller } from './Controller.js';
 import { BulletHandler } from './BulletHandler.js';
 import { UI } from './UI.js';
-import { EffectComposer } from '../../libs/three128/pp/EffectComposer.js';
-import { RenderPass } from '../../libs/three128/pp/RenderPass.js';
-import { ShaderPass } from '../../libs/three128/pp/ShaderPass.js';
-import { GammaCorrectionShader } from '../../libs/three128/pp/GammaCorrectionShader.js';
-import { Tween } from '../../libs/Toon3D.js';
-import { SFX } from '../../libs/SFX.js';
+import { EffectComposer } from './libs/three128/pp/EffectComposer.js';
+import { RenderPass } from './libs/three128/pp/RenderPass.js';
+import { ShaderPass } from '.libs/three128/pp/ShaderPass.js';
+import { GammaCorrectionShader } from './libs/three128/pp/GammaCorrectionShader.js';
+import { Tween } from './libs/Toon3D.js';
+import { SFX } from './libs/SFX.js';
 
 class Game{
 	constructor(){
@@ -25,7 +25,7 @@ class Game{
         this.loadingBar = new LoadingBar();
         this.loadingBar.visible = false;
 
-		this.assetsPath = '../../assets/';
+		this.assetsPath = './assets/';
         
 		this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 500 );
 		//this.camera.position.set( -10.6, 1.6, -1.46 );
@@ -211,7 +211,7 @@ class Game{
         const pmremGenerator = new THREE.PMREMGenerator( this.renderer );
         pmremGenerator.compileEquirectangularShader();
         
-        loader.load( 'hdr/factory.hdr', 
+        loader.load( './assets/hdr/factory.hdr',
 		texture => {
           const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
           pmremGenerator.dispose();
